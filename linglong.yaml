@@ -1,0 +1,28 @@
+version: "1"
+
+package:
+  id: io.github.ECG
+  name: ECG
+  version: 0.0.0.1
+  kind: app
+  description: |
+    Signal processing on Real-time ECG signals
+
+command:
+  - /opt/apps/io.github.ECG/files/bin/ECG
+
+base: org.deepin.foundation/23.0.0
+runtime: org.deepin.Runtime/23.0.1
+
+sources:
+  - kind: git
+    url: https://github.com/wjyrich/ECG.git
+    version: master
+    commit: 00895466843ac4c68b7a674813fead2e58aa89c7
+
+build: |
+  cd /project/linglong/sources/ECG.git
+  git apply ../../../0001-install.patch
+  qmake -makefile PREFIX=${PREFIX} LIB_INSTALL_DIR=${PREFIX}/lib/${TRIPLET}
+  make -j$(nproc)
+  make install
