@@ -1,0 +1,23 @@
+From fea276550c636bba953b3aabb095b7ea501583bf Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Thu, 19 Sep 2024 19:08:48 +0800
+Subject: [PATCH] install
+
+---
+ resources.qrc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/resources.qrc b/resources.qrc
+index 737062a..a506215 100644
+--- a/resources.qrc
++++ b/resources.qrc
+@@ -1,5 +1,5 @@
+ <RCC>
+     <qresource prefix="/resources">
+-        <file>img/medit_logo.png</file>
++        <file>ECG.png</file>
+     </qresource>
+ </RCC>
+-- 
+2.43.4
+
